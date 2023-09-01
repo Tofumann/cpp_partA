@@ -14,4 +14,12 @@ public:
     int V(Graph G);
     int E(Graph G);
 
+
+private:
+    //choose connectivity matrices to represent
+    float** con_matrix;
+
 };
+
+
+   
