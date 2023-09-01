@@ -3,6 +3,8 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<map>
+#include<random>
 
 using namespace std;
 
@@ -18,6 +20,11 @@ public:
 private:
     //choose connectivity matrices to represent
     float** con_matrix;
+
+    int vertex_num;
+    int edge_num;
+
+    std::map<int, char> node_maps;
 
 };
 
