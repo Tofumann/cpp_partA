@@ -46,6 +46,35 @@ vector<int> ShortestPath::path(int u, int w) {
         pre[v] = -1;
         dis[v] = INF;
     }
+    dis[u] = 0;
+    p.insert(p, pair<int, float>(u, 0.0));
+    while (p.size(p) > 0) {
+        temp = p.top(p);
+        p.minPriority(p);
+        if (visited[temp.first]) {
+            continue;
+        }
+        visited[temp.first] = true;
+        vector<int> neigh = this->graph.neighbors(graph, temp.first);
+        for (auto v : neigh) {
+            if ((visited[v] == false) && (dis[v] > dis[temp.first] + graph.get_edge_value(graph, v, temp.first))) {
+                dis[v] = dis[temp.first] + graph.get_edge_value(graph, v, temp.first);
+                pre[v] = temp.first;
+                p.insert(p, pair<int, float>(v, dis[v]));
+
+            }
+        }
+        if (temp.first == w) {
+            to_add_node = w;
+            while (to_add_node != u) {
+                my_path.insert(my_path.begin(), to_add_node);
+                to_add_node = pre[to_add_node];
+            }
+            my_path.insert(my_path.begin(), u);
+            return my_path;
+        }
+    }
+
 
 }
 
