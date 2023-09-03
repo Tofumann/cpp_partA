@@ -41,3 +41,19 @@ int Graph::V(Graph G) {
 int Graph::E(Graph G) {
     return this->edge_num;
 }
+
+bool Graph::adjacent(Graph G, const int x, const int y) {
+    if (this->con_matrix[x][y] == INF)
+        return false;
+    else
+        return true;
+}
+
+vector<int>Graph::neighbors(Graph G, const int x) {
+    vector<int> neigh_vector;
+    for (int i = 0; i < this->vertex_num; i++) {
+        if (this->con_matrix[x][i] != INF) {
+
+        }
+    }
+}
