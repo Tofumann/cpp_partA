@@ -53,7 +53,17 @@ vector<int>Graph::neighbors(Graph G, const int x) {
     vector<int> neigh_vector;
     for (int i = 0; i < this->vertex_num; i++) {
         if (this->con_matrix[x][i] != INF) {
-
+            neigh_vector.push_back(i);
         }
     }
+    return neigh_vector;
 }
+
+void Graph::delete_edge(Graph G, const int x, const int y) {
+    if (this->con_matrix[x][y] != INF) {
+        this->con_matrix[x][y] = INF;
+        this->con_matrix[y][x] = INF;
+        this->edge_num--;
+    }
+}
+
