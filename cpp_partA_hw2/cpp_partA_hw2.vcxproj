@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CalculateAverageDis.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="PriorityQueue.cpp" />
     <ClCompile Include="ShortestPath.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CalculateAverageDis.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="PriorityQueue.h" />
     <ClInclude Include="ShortestPath.h" />
