@@ -7,7 +7,7 @@
 #include"Graph.h"
 
 using namespace std;
-#define INF 999999;
+#define INF 999999
 
 Graph::Graph() {
     int node_number = 50;
