@@ -5,6 +5,9 @@
 #include <vector>
 #include <string>
 #include"Graph.h"
+#include<map>
+#include<ctime>
+#include<random>
 
 using namespace std;
 #define INF 999999

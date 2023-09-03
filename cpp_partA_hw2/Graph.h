@@ -5,6 +5,7 @@
 #include<string>
 #include<map>
 #include<random>
+#include<ctime>
 
 using namespace std;
 
