@@ -7,6 +7,8 @@
 #include<random>
 #include<queue>
 
+#include"CalculateAverageDis.h"
+
 #define INF 999999
 using namespace std;
 
