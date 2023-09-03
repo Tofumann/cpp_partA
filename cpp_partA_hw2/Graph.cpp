@@ -59,6 +59,15 @@ vector<int>Graph::neighbors(Graph G, const int x) {
     return neigh_vector;
 }
 
+void Graph::add(Graph G, const int x, const int y, const float value) {
+    //create a random distance between min and max
+    if (this->con_matrix[x][y] == INF) {
+        this->con_matrix[x][y] = value;
+        this->con_matrix[y][x] = value;
+        this->edge_num++;
+    }
+}
+
 void Graph::delete_edge(Graph G, const int x, const int y) {
     if (this->con_matrix[x][y] != INF) {
         this->con_matrix[x][y] = INF;
@@ -67,3 +76,27 @@ void Graph::delete_edge(Graph G, const int x, const int y) {
     }
 }
 
+
+char Graph::get_node_value(Graph G, const int x) {
+    return this->node_maps[x];
+}
+
+void Graph::set_node_value(Graph G, int x, char a) {
+    this->node_maps[x] = a;
+}
+
+float Graph::get_edge_value(Graph G, const int x, const int y) {
+    for (int i = 0; i < V(G); i++) {
+        for (int j = 0; j < V(G); j++) {
+            if (x == i && y == j) {
+                return this->con_matrix[x][y];
+            }
+        }
+    }
+    return INF;
+}
+
+void Graph::set_edge_value(Graph G, const int x, const int y, const float v) {
+    this->con_matrix[x][y] = v;
+    this->con_matrix[y][x] = v;
+}
