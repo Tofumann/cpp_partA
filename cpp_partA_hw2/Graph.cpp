@@ -45,6 +45,10 @@ int Graph::E(Graph G) {
     return this->edge_num;
 }
 
+float** Graph::C(Graph G) {
+    return this->con_matrix;
+}
+
 bool Graph::adjacent(Graph G, const int x, const int y) {
     if (this->con_matrix[x][y] == INF)
         return false;

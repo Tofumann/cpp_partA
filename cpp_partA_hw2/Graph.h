@@ -16,6 +16,7 @@ public:
     Graph(int node_number);
     int V(Graph G);
     int E(Graph G);
+    float** C(Graph G);
     bool adjacent(Graph G, const int x, const int y);
     vector<int> neighbors(Graph G, const int x);
     void add(Graph G, const int x, const int y, const float value);
