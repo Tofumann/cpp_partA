@@ -1,5 +1,4 @@
-PROMPT
-Graph algorithms and graph representation are a critical tool in CS. We want to create a graph as an ADT (Abstract Data Type) using C++ classes. The basic problem will be to write Dijkstra’s algorithm as a class member function (method in OO speak). You should already know Dijkstra’s algorithm for the shortest path problem from prior experience, but it will be reviewed in class. It is the basis for many route calculations and optimizations programs. 
+Graph algorithms and graph representation are a critical tool in CS. To create a graph as an ADT (Abstract Data Type) using C++ classes. The basic problem will be to write Dijkstra’s algorithm as a class member function (method in OO speak). It is the basis for many route calculations and optimizations programs. 
 
 There are 2 basic implementations used for graphs – one is edge lists, and the other is connectivity matrices. You can decide which to use, but comment on your choice. 
 
@@ -15,11 +14,6 @@ Keep in mind: good style – choice of identifiers, short functions, good docume
 
 Tips:  Hand-simulate your algorithm on a small graph.
 
-Grading:
-
-Submit the program for peer grading.
-
-Nota Bene:  Keep in mind that there is a wide array of backgrounds in students taking this course. From this perspective the student who is the intended target has a C background and some computer science. At this point in the class it is not expected that the student know the detailed uses of STL and iterator classes. When peer grading be generous, and read the 200 word explanation. It is certainly okay for an experienced C++ programmer to use the most advanced elements of the libraries and the language if properly explained in her code. Conversely, it is also okay for the beginner to use a much simpler approach.  Problem 3 will continue with graph algorithms and will allow participants to program in a more advanced and richer style.
 
 Reference Abstractions:  Implementing Dijkstra’s algorithm requires thinking about at least three basic abstractions: Graph (G = (V, E), PriorityQueue, and ShortestPath algorithm.  Additionally, deciding on a scheme for naming vertices (V) is an important first step in implementation design. By convention, vertices are generally mapped onto the set of Integers in the range from 0 : |V| -1.  This provides an effective Key into sequential containers (like ARRAY) to access vertex records in constant time - Θ(1). Also, in models where vertex names are not represented with integers, the use of a symbol table could be used to provide a 1-to-1 mapping to associate V arbitrary names with V integers in the proper range.
 
@@ -98,5 +92,3 @@ Compute for a set of randomly generated graphs an average shortest path.
 URLs
 
 http://en.wikipedia.org/wiki/Dijkstra's_algorithm
-
-The time allotted for this problem is two weeks. Beginners should spend the first week creating a graph class with appropriate constructors. The second week can be used to implement and test Dijkstra’s algorithm.
